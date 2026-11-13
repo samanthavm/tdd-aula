@@ -22,6 +22,7 @@ class ContaTest {
         Conta acc = new Conta();
         acc.deposito(100);
         assertEquals(100, acc.getSaldo());
+        assertEquals(1,  acc.getEntradas().size());
 
     }
 
