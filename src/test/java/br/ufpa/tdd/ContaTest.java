@@ -17,4 +17,12 @@ class ContaTest {
         assertTrue(acc.getEntradas().isEmpty());
     }
 
+    @Test
+    void depositoEmConta(){
+        Conta acc = new Conta();
+        acc.deposito(100);
+        assertEquals(100, acc.getSaldo());
+
+    }
+
 }
