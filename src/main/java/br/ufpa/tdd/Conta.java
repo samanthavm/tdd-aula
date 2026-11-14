@@ -18,6 +18,11 @@ public class Conta {
         this.saldo += valor;
         this.entradas.add("Deposito "+ valor);
     }
+    public void saque(int valor){
+        this.saldo -= valor;
+        this.entradas.add("Saque "+ valor);
+        
+    }
 
 
 
