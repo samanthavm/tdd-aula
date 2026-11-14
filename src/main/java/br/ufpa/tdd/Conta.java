@@ -19,6 +19,9 @@ public class Conta {
         this.entradas.add("Deposito "+ valor);
     }
     public void saque(int valor){
+        if(valor <= 0){
+            throw new IllegalArgumentException("Valor invalido para saque");
+        }
         this.saldo -= valor;
         this.entradas.add("Saque "+ valor);
         
