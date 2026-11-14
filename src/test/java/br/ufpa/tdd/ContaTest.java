@@ -38,5 +38,11 @@ class ContaTest {
         acc.deposito(100);
         assertThrows(IllegalArgumentException.class, () -> acc.saque(-10));
     }
+    @Test
+    void saqueComSaldoInsuficiente(){
+        Conta acc = new Conta();
+        acc.deposito(100);
+        assertThrows(IllegalArgumentException.class, () -> acc.saque(150));
+    }
 
 }
