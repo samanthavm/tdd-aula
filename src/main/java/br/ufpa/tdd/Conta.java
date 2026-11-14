@@ -22,6 +22,9 @@ public class Conta {
         if(valor <= 0){
             throw new IllegalArgumentException("Valor invalido para saque");
         }
+        if (valor > this.saldo){
+            throw new IllegalArgumentException("Saldo insuficiente");
+        }
         this.saldo -= valor;
         this.entradas.add("Saque "+ valor);
         
